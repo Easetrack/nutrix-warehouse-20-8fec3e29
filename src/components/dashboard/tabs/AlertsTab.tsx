@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import LowStockItemsCard from '../alerts/LowStockItemsCard';
 import ExpiringItemsCard from '../alerts/ExpiringItemsCard';
 import SystemNotificationsCard from '../alerts/SystemNotificationsCard';
+import { SystemNotification } from '@/types/dashboard';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,12 +30,12 @@ const expiringItems = [
   { id: 4, name: 'Special Diet Mix', category: 'Bird Food', expiresIn: 12 },
 ];
 
-const systemNotifications = [
+const systemNotifications: SystemNotification[] = [
   { message: 'Inventory adjustment required for SKU-2345', time: '2 hours ago', type: 'warning' },
   { message: 'Order #12456 successfully processed', time: '4 hours ago', type: 'success' },
   { message: 'Batch #789 quality check completed', time: '1 day ago', type: 'info' },
   { message: 'System maintenance scheduled for May 20, 02:00 AM', time: '2 days ago', type: 'info' },
-] as const;
+];
 
 const AlertsTab = () => {
   return (

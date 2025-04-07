@@ -2,17 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { SystemNotification } from '@/types/dashboard';
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
 };
-
-interface SystemNotification {
-  message: string;
-  time: string;
-  type: 'warning' | 'success' | 'info';
-}
 
 interface SystemNotificationsCardProps {
   notifications: SystemNotification[];

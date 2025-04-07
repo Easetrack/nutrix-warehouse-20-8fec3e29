@@ -2,7 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { ResponsiveContainer } from 'recharts';
 
 interface ChartCardProps {
   title: string;
@@ -20,9 +19,7 @@ const ChartCard = ({ title, children, className, height = "h-80" }: ChartCardPro
         </CardHeader>
         <CardContent>
           <div className={height}>
-            <ResponsiveContainer width="100%" height="100%">
-              {children}
-            </ResponsiveContainer>
+            {children}
           </div>
         </CardContent>
       </Card>

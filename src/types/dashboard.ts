@@ -9,3 +9,9 @@ export interface NotificationItem {
   read: boolean;
   type: NotificationType;
 }
+
+export interface SystemNotification {
+  message: string;
+  time: string;
+  type: "warning" | "success" | "info" | "danger";
+}
